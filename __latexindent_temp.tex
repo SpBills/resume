@@ -27,6 +27,9 @@
 \usepackage{tabularx}
 \usepackage{enumitem}
 \usepackage{nopageno}
+\usepackage[sfdefault]{roboto}
+\usepackage{setspace}
+
 
 \usepackage[nobottomtitles*]{titlesec}
 \titleformat{\section}[hang]{\LARGE\bfseries}{}{0pt}{}[\titlerule]
@@ -42,6 +45,7 @@
         \small #3
     }
 }
+
 
 \newcommand{\personalprojectheader}[3] {
     \vspace{2pt}
@@ -65,21 +69,24 @@
         \switchcolumn
         
         \parbox[top][0.08\textheight][c]{\linewidth}{
-                \begin{itemize}[noitemsep]
-                    \item[] 716 Park Avenue, New Martinsville WV, 26155
-                    \item[] 304-551-1045
-                    \item[] \href{mailto://spencebills0@gmail.com}{spencebills0@gmail.com}
-                    \item[] \url{https://github.com/spbills}
-                \end{itemize}
+                    716 Park Avenue, New Martinsville WV, 26155 \\
+                    304-551-1045 \\
+                    \href{mailto://spencebills0@gmail.com}{spencebills0@gmail.com} \\
+                    \url{https://github.com/spbills}
         }
         
         \switchcolumn
 
         \section*{Education}
         \parbox[top][][c]{\linewidth}{
+            \rightline{\small \textit{Fall 2020 - Present}}
             Bachelors of Science in Computer Science \\
-            Cedarville University 
+            Cedarville University \\  
+            (Expected Graduation in Spring 2024)
         }
+        
+        % Add struts to increase readability.
+        \vspace{0.25in}
         
         \section*{Skills}
 
@@ -88,6 +95,7 @@
                 \textbf{Programming Languages}
             \end{center}
             \begin{tabularx}{\linewidth}{YY}
+
                 Rust & Javascript \\
                 C++ & Java \\
                 PHP & HTML \\
@@ -105,16 +113,19 @@
             \end{tabularx}
         }
 
+        % More spacing for readability.
+        \vspace{0.25in}
+
         \section*{Personal Projects}
         \parbox[top][][c]{\linewidth}{
             \personalprojectheader{November 2019 - July 2020}{Schedulizer}{}
-            \begin{itemize}[noitemsep]
+            \begin{itemize}
                 \item Developed to aid in the creation of master schedules for high schools and universities.
                 \item Full-stack web application, with a backend in Java and MySQL, and Vue.JS frontend utilizing Bootstrap 4.
                 \item Scheduling system used by Magnolia High School for the 2020-2021 academic year.
                 \item Won first place at local STEM competition.
             \end{itemize}
-            \personalprojectheader{2020 - current}{Rust CMS}{https://github.com/Rust-CMS/rust-cms}
+            \personalprojectheader{December 2020 - current}{Rust CMS}{https://github.com/Rust-CMS/rust-cms}
             \begin{itemize}
                 \item Developed as a modern, open-source alternative to old PHP-based CMSs such as ProcessWire or Grav.
                 \item Backend developed in Rust and MySQL with a Vue.JS frontend.
@@ -125,19 +136,32 @@
 
         \section*{Experience}
 
-        \workexpheader{Summer 2019}{Frontend Software Developer Internship}{Prosite Business Solutions}
-        \begin{itemize}[noitemsep]
+        \workexpheader{Summer 2019}{Frontend Developer Internship}{Prosite Business Solutions}
+        \begin{itemize}
             \item Developed and maintained web-based form builder using JavaScript and HTML.
             \item Redesigned a JavaScript library to fit needs of an online ordering system.
             \item Customer Support and Computer Repair.
         \end{itemize}
 
-        \workexpheader{Summer 2018}{Full-stack Software Developer}{Wetzel County School District}
-        \begin{itemize}[noitemsep]
+        \vspace{0.25in}
+
+        \workexpheader{Summer 2020}{Full-stack Developer}{Wetzel County School District}
+        \begin{itemize}
             \item Contracted by WCSD for developing an inventory management system for laptops.
             \item Worked with client for integration with WVEIS.
             \item Handled importing and exporting data in CSV format.
             \item Full-stack web application using a Node.JS backend, \\ MySQL database, and Vue.JS frontend.
         \end{itemize}
+
+        \vspace{0.25in}
+
+
+        \workexpheader{February 2021 - Current}{PHP \& Wordpress Developer}{Fight or Flight Escapes}
+        \begin{itemize}
+            \item Developed a custom Wordpress theme.
+            \item Used PHP to interface with an internal API to create custom, dynamic web pages.
+            \item Hosting and maintenance of a Wordpress instance, both locally and through shared hosting.
+        \end{itemize}
+
     \end{paracol}
 \end{document}

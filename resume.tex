@@ -27,6 +27,9 @@
 \usepackage{tabularx}
 \usepackage{enumitem}
 \usepackage{nopageno}
+\usepackage[sfdefault]{roboto}
+\usepackage{setspace}
+
 
 \usepackage[nobottomtitles*]{titlesec}
 \titleformat{\section}[hang]{\LARGE\bfseries}{}{0pt}{}[\titlerule]
@@ -42,6 +45,10 @@
         \small #3
     }
 }
+
+\setstretch{1.1}
+\setlength\itemsep{0.1in}
+
 
 \newcommand{\personalprojectheader}[3] {
     \vspace{2pt}
@@ -91,6 +98,7 @@
                 \textbf{Programming Languages}
             \end{center}
             \begin{tabularx}{\linewidth}{YY}
+
                 Rust & Javascript \\
                 C++ & Java \\
                 PHP & HTML \\
@@ -102,9 +110,8 @@
             \end{center}
             \begin{tabularx}{\linewidth}{YY}
                 Git & MySQL \\
-                Node.JS & MongoDB \\
-                Vue.JS & React.JS \\
-                Docker & React Native 
+                Node.JS & React Native  \\
+                Vue.JS & Docker \\
             \end{tabularx}
         }
 
@@ -114,13 +121,13 @@
         \section*{Personal Projects}
         \parbox[top][][c]{\linewidth}{
             \personalprojectheader{November 2019 - July 2020}{Schedulizer}{}
-            \begin{itemize}[noitemsep]
+            \begin{itemize}
                 \item Developed to aid in the creation of master schedules for high schools and universities.
                 \item Full-stack web application, with a backend in Java and MySQL, and Vue.JS frontend utilizing Bootstrap 4.
                 \item Scheduling system used by Magnolia High School for the 2020-2021 academic year.
                 \item Won first place at local STEM competition.
             \end{itemize}
-            \personalprojectheader{2020 - current}{Rust CMS}{https://github.com/Rust-CMS/rust-cms}
+            \personalprojectheader{December 2020 - current}{Rust CMS}{https://github.com/Rust-CMS/rust-cms}
             \begin{itemize}
                 \item Developed as a modern, open-source alternative to old PHP-based CMSs such as ProcessWire or Grav.
                 \item Backend developed in Rust and MySQL with a Vue.JS frontend.
@@ -131,23 +138,28 @@
 
         \section*{Experience}
 
-        \workexpheader{Summer 2019}{Frontend Software Developer Internship}{Prosite Business Solutions}
-        \begin{itemize}[noitemsep]
+        \workexpheader{Summer 2019}{Frontend Developer Internship}{Prosite Business Solutions}
+        \begin{itemize}
             \item Developed and maintained web-based form builder using JavaScript and HTML.
             \item Redesigned a JavaScript library to fit needs of an online ordering system.
             \item Customer Support and Computer Repair.
         \end{itemize}
 
-        \workexpheader{Summer 2018}{Full-stack Software Developer}{Wetzel County School District}
-        \begin{itemize}[noitemsep]
+        \vspace{0.25in}
+
+        \workexpheader{Summer 2020}{Full-stack Developer}{Wetzel County School District}
+        \begin{itemize}
             \item Contracted by WCSD for developing an inventory management system for laptops.
             \item Worked with client for integration with WVEIS.
             \item Handled importing and exporting data in CSV format.
             \item Full-stack web application using a Node.JS backend, \\ MySQL database, and Vue.JS frontend.
         \end{itemize}
 
-        \workexpheader{Spring 2021 - Current}{PHP \& Wordpress Developer}{Fight or Flight Escapes}
-        \begin{itemize}[noitemsep]
+        \vspace{0.25in}
+
+
+        \workexpheader{February 2021 - Current}{PHP \& Wordpress Developer}{Fight or Flight Escapes}
+        \begin{itemize}
             \item Developed a custom Wordpress theme.
             \item Used PHP to interface with an internal API to create custom, dynamic web pages.
             \item Hosting and maintenance of a Wordpress instance, both locally and through shared hosting.
