@@ -1,0 +1,143 @@
+  
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{scrextend}
+\usepackage[margin=0.4in]{geometry}
+
+\usepackage{hyperref}
+\urlstyle{same}
+\hypersetup{
+    colorlinks = true, % Disable the ugly boxes
+    urlcolor = blue, 
+    linkcolor = blue, 
+    citecolor = red 
+}
+
+\usepackage{array}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+
+% Misc packages
+\usepackage{paracol}
+\usepackage{multicol}
+
+\setlength{\columnsep}{0.4in}
+
+\usepackage{xcolor}
+\usepackage[framemethod=tikz]{mdframed}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{nopageno}
+
+\usepackage[nobottomtitles*]{titlesec}
+\titleformat{\section}[hang]{\LARGE\bfseries}{}{0pt}{}[\titlerule]
+
+% Command to make it easier to add work experiences
+
+\newcommand{\workexpheader}[3]{
+    \rightline{\small \textit{#1}}
+    \vspace{2pt}
+    {
+        \Large \textbf{#2} \\
+        \strut
+        \small #3
+    }
+}
+
+\newcommand{\personalprojectheader}[3] {
+    \vspace{2pt}
+    \rightline{\small \textit{#1}}
+    {
+        \Large \textbf{#2} \\
+        \strut
+        \small \url{#3}
+    }
+}
+
+% Disable parindent
+\setlength\parindent{0pt}
+
+\begin{document}
+    \begin{paracol}{2}
+        \parbox[top][0.08\textheight][c]{\linewidth}{
+            \textbf{\Huge{Spencer Bills}}
+        }
+        
+        \switchcolumn
+        
+        \parbox[top][0.08\textheight][c]{\linewidth}{
+                \begin{itemize}[noitemsep]
+                    \item[] 716 Park Avenue, New Martinsville WV, 26155
+                    \item[] 304-551-1045
+                    \item[] \href{mailto://spencebills0@gmail.com}{spencebills0@gmail.com}
+                    \item[] \url{https://github.com/spbills}
+                \end{itemize}
+        }
+        
+        \switchcolumn
+
+        \section*{Education}
+        \parbox[top][][c]{\linewidth}{
+            Bachelors of Science in Computer Science \\
+            Cedarville University 
+        }
+        
+        \section*{Skills}
+
+        \parbox[top][][c]{\linewidth}{
+            \begin{center}
+                \textbf{Programming Languages}
+            \end{center}
+            \begin{tabularx}{\linewidth}{YY}
+                Rust & Javascript \\
+                C++ & Java \\
+                PHP & HTML \\
+                CSS & Python \\
+            \end{tabularx}
+            
+            \begin{center}
+                \textbf{Technologies}
+            \end{center}
+            \begin{tabularx}{\linewidth}{YY}
+                Git & MySQL \\
+                Node.JS & MongoDB \\
+                Vue.JS & React.JS \\
+                Docker & React Native 
+            \end{tabularx}
+        }
+
+        \section*{Personal Projects}
+        \parbox[top][][c]{\linewidth}{
+            \personalprojectheader{November 2019 - July 2020}{Schedulizer}{}
+            \begin{itemize}[noitemsep]
+                \item Developed to aid in the creation of master schedules for high schools and universities.
+                \item Full-stack web application, with a backend in Java and MySQL, and Vue.JS frontend utilizing Bootstrap 4.
+                \item Scheduling system used by Magnolia High School for the 2020-2021 academic year.
+                \item Won first place at local STEM competition.
+            \end{itemize}
+            \personalprojectheader{2020 - current}{Rust CMS}{https://github.com/Rust-CMS/rust-cms}
+            \begin{itemize}
+                \item Developed as a modern, open-source alternative to old PHP-based CMSs such as ProcessWire or Grav.
+                \item Backend developed in Rust and MySQL with a Vue.JS frontend.
+            \end{itemize}
+        }
+
+        \switchcolumn
+
+        \section*{Experience}
+
+        \workexpheader{Summer 2019}{Frontend Software Developer Internship}{Prosite Business Solutions}
+        \begin{itemize}[noitemsep]
+            \item Developed and maintained web-based form builder using JavaScript and HTML.
+            \item Redesigned a JavaScript library to fit needs of an online ordering system.
+            \item Customer Support and Computer Repair.
+        \end{itemize}
+
+        \workexpheader{Summer 2018}{Full-stack Software Developer}{Wetzel County School District}
+        \begin{itemize}[noitemsep]
+            \item Contracted by WCSD for developing an inventory management system for laptops.
+            \item Worked with client for integration with WVEIS.
+            \item Handled importing and exporting data in CSV format.
+            \item Full-stack web application using a Node.JS backend, \\ MySQL database, and Vue.JS frontend.
+        \end{itemize}
+    \end{paracol}
+\end{document}
